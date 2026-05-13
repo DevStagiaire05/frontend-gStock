@@ -2,14 +2,14 @@ import { useState } from "react";
 import type { SubmitEvent } from "react";
 
 import { apiClient } from "../api/client";
-import type { TransferStockPaylod } from "../types/inventory";
+import type { TransferStockPayload } from "../types/inventory";
 
     type TransferStockFromProps ={
         onTransferSuccess:()=> void;
     };
 
     export function TransferStockForm({onTransferSuccess}: TransferStockFromProps){
-        const[form, setForm] = useState<TransferStockPaylod>({
+        const[form, setForm] = useState<TransferStockPayload>({
             productId:'',
             fromStoreId:'',
             toStoreId:'',
@@ -20,7 +20,7 @@ import type { TransferStockPaylod } from "../types/inventory";
 
         const[error,setError]= useState<string | null>(null);
 
-        function updateField <K extends keyof TransferStockPaylod>(key: K, value: TransferStockPaylod[K]){
+        function updateField <K extends keyof TransferStockPayload>(key: K, value: TransferStockPayload[K]){
             setForm((previous) =>({
                 ...previous,
                 [key]:value,
