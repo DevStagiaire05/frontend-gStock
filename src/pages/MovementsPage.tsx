@@ -5,6 +5,11 @@ import { EmptyState } from "../components/ui/EmptyState";
 
     export function MovementsPage(){
         const{movements, loading, error} = useInventory();
+        const movementTranslations: Record<string, string> = {
+            IN: 'Entrée',
+            OUT: 'Sortie',
+            TRANSFER: 'Transfert',
+            };
 
         return (
             <section>
@@ -30,9 +35,10 @@ import { EmptyState } from "../components/ui/EmptyState";
                                     {movements.map((movement) => (
                                         <tr key={movement.id} className="hover:bg-green-50/50">
                                             <td className="px-4 py-3 text-slate-600 ">{formatDate(movement.createdAt)}</td>
-                                            <td className="px-4 py-3 font-semibold text-green-900">{movement.type}</td>
+                                            <td className="px-4 py-3 font-semibold text-green-900">{movementTranslations[movement.type] || movement.type}</td>
                                             <td className="px-4 py-3">{movement.product?.name}</td>
                                             <td className="px-4 py-3 text-slate-600 ">{movement.fromStore?.name ||'-'}</td>
+                                            <td className="px-4 py-3 text-slate-600 ">{movement.toStore?.name ||'-'}</td>
                                             <td className="px-4 py-3 text-right font-bold">{movement.quantity}</td>
                                         </tr>
                                     ))}

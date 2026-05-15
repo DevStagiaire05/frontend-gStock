@@ -4,7 +4,7 @@ import {Boxes,LayoutDashboard,Package,Store, Repeat, ClipboardList} from 'lucide
 import clsx from 'clsx';
 
 const links = [
-    {to:'/',label:'Dashboard',icon:LayoutDashboard},
+    {to:'/',label:'Tableau de bord',icon:LayoutDashboard},
     {to:'/products',label:'Produits',icon:Package},
     {to:'/stores',label:'Magasins',icon:Store},
     {to:'/stocks', label:'Stocks',icon:Boxes},

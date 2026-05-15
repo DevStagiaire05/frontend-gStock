@@ -20,7 +20,7 @@ export const inventoryApi = {
         remove : async (id: string) => (await http.delete(`/products/${id}`)).data,
     },
     stores : {
-        list : async () => (await http.get<Store[]>('/Stores')).data,
+        list : async () => (await http.get<Store[]>('/stores')).data,
         create : async (payload: CreateStorePayload) => (await http.post<Store>('/Stores', payload)).data,
         remove: async (id: string) => (await http.delete(`/Stores/${id}`)).data,
     },
@@ -31,7 +31,7 @@ export const inventoryApi = {
     },
 
     movements : {
-        list : async () => (await http.get<StockMovement[]>('/stock-movements/')).data,
+        list : async () => (await http.get<StockMovement[]>('/stock-movements')).data,
         createIn: async (payload: StockInPayload) => (await http.post<StockMovement>('/stock-movements/in', payload)).data,
         createOut: async (payload: StockOutPayload) => (await http.post<StockMovement>('/stock-movements/out', payload)).data,
         transfer: async (payload: TransferStockPayload) => (await http.post<StockMovement>('/stock-movements/transfer', payload)).data,
