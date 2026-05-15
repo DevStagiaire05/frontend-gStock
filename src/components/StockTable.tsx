@@ -2,7 +2,7 @@ import type {Stock} from '../types/inventory';
 import { EmptyState } from './ui/EmptyState';
 
 
-    export function StockTable(stocks:Stock[]){
+    export function StockTable({stocks}:{stocks: Stock[]}){
 
         if(stocks.length ===0){
             return <EmptyState title=' le stock est vide' message='Approvisionner votre stock ' />;

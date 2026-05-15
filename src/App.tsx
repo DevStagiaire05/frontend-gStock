@@ -1,12 +1,11 @@
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import AppLayout from './components/layouts/AppLayout';
-import DashboardPage from './components/pages/Dashboard';
-import ProductsPage from './components/pages/Products';
-import StoresPage from './components/pages/Stores';
-import StocksPage from './components/pages/Stocks';
-import OperationsPage from './components/pages/Operations';
-import MovementsPage from './components/pages/Movements';
-
+import {AppLayout} from './components/layouts/AppLayout';
+import {DashboardPage} from './pages/DashboardPage';
+import { ProductsPage } from './pages/ProductsPage';
+import { StoresPage } from './pages/StoresPage';
+import { StocksPage } from './pages/StocksPage';
+import { OperationsPage } from './pages/OperationsPage';
+import { MovementsPage } from './pages/MovementsPage';
 
 const router = createBrowserRouter([
   {

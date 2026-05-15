@@ -12,7 +12,7 @@ const links = [
     {to:'/movements',label:'Mouvements',icon:ClipboardList},
 ];
 
-    export default function AppLayout() {
+    export function AppLayout() {
 
         return (
             <div className="min-h-screen bg-slate-50 text-slate-900">

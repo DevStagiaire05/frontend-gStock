@@ -4,7 +4,7 @@ import { PageHeader } from '../components/ui/PageHeader';
 import { StatCard } from '../components/ui/StatCard';
 
 
-    export default function DashboardPage() {
+    export function DashboardPage() {
 
         const {products, stores,stocks, movements, loading, error} = useInventory();
         const totalQuantity = stocks.reduce((sum, stock)=> sum + stock.quantity,0);

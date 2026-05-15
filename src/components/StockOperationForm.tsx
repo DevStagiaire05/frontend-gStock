@@ -12,7 +12,7 @@ type Props = {
     onSubmit : (operation: Operation,payload:Record<string, unknown>) => Promise<void>;
 };
 
-    export default function StockOperationForm({products, stores, onSubmit}: Props){
+    export function StockOperationForm({products, stores, onSubmit}: Props){
         const [operation, setOperation] = useState<Operation>('IN');
         const [productId, setProductId] = useState('');
         const [toStoreId, setToStoreId] = useState('');
